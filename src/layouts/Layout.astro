@@ -89,7 +89,6 @@ const { title } = Astro.props;
 body {
   background-color: var(--layout-bg-color);
   color: var(--color-white);
-  min-height: 100vh;
 }
 
 .container {
@@ -104,18 +103,30 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
-  padding: 192px 0;
+  padding: 96px 0;
+	row-gap: 16px;
+	@media (min-width: 640px) {
+		padding: 192px 0;
+	}
 }
 
 .title {
-  font-size: 96px;
+  font-size: 48px;
   font-weight: 700;
+	text-align: center;
+	@media (min-width: 640px) {
+		font-size: 96px;
+	}
 }
 
 .description {
-  font-size: 40px;
+  font-size: 24px;
   font-weight: 400;
+	text-align: center;
   color: var(--color-neutral-400);
+	@media (min-width: 640px) {
+		font-size: 40px;
+	}
 }
 
 </style>
