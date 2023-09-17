@@ -1,10 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { UiAvatar } from '../components/ui/ui-avatar';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-	
+		<div class="container">
+      <div class="profile">
+        <UiAvatar image="/images/avatar.png" />
+        <h1 class="title">Ed Bazhenov</h1>
+        <p class="description">Frontend Software Engineer</p>
+      </div>
+    </div>
 	</main>
 </Layout>
 
