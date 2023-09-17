@@ -15,11 +15,110 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 <style is:global>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --color-white: #fff;
+  --color-primary-50: #f9f5ff;
+  --color-primary-100: #f4ebff;
+  --color-primary-200: #e9d7fe;
+  --color-primary-300: #d6bbfb;
+  --color-primary-400: #b692f6;
+  --color-primary-500: #9e77ed;
+  --color-primary-700: #6941c6;
+  --color-primary-600: #7f56d9;
+  --color-primary-800: #53389e;
+  --color-neutral-25: #fcfcfd;
+  --color-neutral-50: #f9fafb;
+  --color-neutral-100: #f2f4f7;
+  --color-neutral-200: #eaecf0;
+  --color-neutral-400: #98a2b3;
+  --color-neutral-500: #667085;
+  --color-neutral-600: #475467;
+  --color-neutral-800: #1d2939;
+  --color-error-50: #fef3f2;
+  --color-error-100: #fee4e2;
+  --color-error-400: #f97066;
+  --color-error-500: #f04438;
+  --color-error-600: #d92d20;
+  --color-error-700: #b42318;
+  --color-error-800: #912018;
+  --button-bg-color-error-active: #b42318;
+  --button-bg-color-error-hovered: #d92d20;
+  --button-bg-color-primary-active: #6941c6;
+  --list-item-border-radius: 8px;
+  --input-height: 48px;
+  --base-border-radius: 8px;
+  --result-text-color: #7f56d9;
+  --input-border-radius: 8px;
+  --button-bg-color-error: #f04438;
+  --button-border-radius: 8px;
+  --text-color: #1d2939;
+  --button-bg-color-primary-hovered: #7f56d9;
+  --button-bg-color-primary: #9e77ed;
+
+  --layout-bg-color: var(--color-neutral-800);
+  --my-avatar-bg-color: var(--color-neutral-50);
+}
+
+body {
+  background-color: var(--layout-bg-color);
+  color: var(--color-white);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 192px 0;
+}
+
+.title {
+  font-size: 96px;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--color-neutral-400);
+}
 
 </style>
