@@ -6,10 +6,13 @@ export class UiAvatar extends LitElement {
   @property({ type: String })
   image: string;
 
+  @property({ type: String })
+  alt: string;
+
   render() {
     return html`
       <div class="my-avatar">
-        <img src="${this.image}" class="my-avatar__image" />
+        <img src="${this.image}" class="my-avatar__image" alt="${this.alt}" />
       </div>
     `;
   }
